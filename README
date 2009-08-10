@@ -1,0 +1,9 @@
+This Rails plugin allows rails to look in a app/views/default if it cannot find your view file.
+
+To use this plugin:
+
+  class ApplicationController < ActionController::Base
+    include BoochTek::Rails::DefaultViews
+  end
+
+You can find this plugin at http://github.com/boochtek/rails-default_views/.
