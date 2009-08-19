@@ -1,3 +1,12 @@
+module ActionController
+  class Base
+    def self.default_views()
+      include BoochTek::Rails::DefaultViews
+    end
+  end
+end
+
+
 module BoochTek
   module Rails
     module DefaultViews
