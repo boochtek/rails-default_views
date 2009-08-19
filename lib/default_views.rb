@@ -21,13 +21,11 @@ module BoochTek
         protected
 
         # Look for view templates in app/views/default if they aren't in app/views/#{controller_name}.
-        # TODO/FIXME: Needs some refactoring.
         # There are only a few cases where a template is used:
         #   render (which renders default_template)
         #   render :action => :some_action (or just render :some_action or render 'some_action')
         #   render :file => '/path/to/some/file'  (or just render '/path/to/some/file') -- No need to handle this one, since they explicitly specified the full path.
         #   render :template => 'some/file'  (or just render 'some/file')
-        # NOTE: For Rails 3, Yehuda Katz suggests overriding _determine_template to provide the fallback -- path http://yehudakatz.com/2009/07/19/rails-3-the-great-decoupling/.
         def render(options = nil, extra_options = {}, &block) #:doc:
           super(options, extra_options, &block)
         rescue ActionView::MissingTemplate => e # e.path contains full path to template file

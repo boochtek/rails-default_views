@@ -1,0 +1,11 @@
+TODO
+====
+Refactor and clean up the code.
+Use FALLBACK_VIEW_DIR constant, instead of hard-coding app/views/default/.
+Allow the caller to specify a fallback directory.
+Should we automatically inject the functionality into ActionController::Base, without explicitly including it?
+    Probably, since why else would we install the plugin?
+Support Rails 3.0, in addition to Rails 2.3.
+    NOTE: Yehuda Katz suggests overriding _determine_template to provide the fallback, per http://yehudakatz.com/2009/07/19/rails-3-the-great-decoupling/.
+Write a full test suite.
+Does it make sense to make this a gem?
