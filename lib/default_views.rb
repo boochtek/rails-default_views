@@ -4,8 +4,8 @@ module BoochTek
 
       # NOT USED YET -- FALLBACK_VIEW_DIR = Dir.join(RAILS_ROOT, 'app', 'views', 'default')
 
-      def included(base)
-        base.send(:include, InstanceMethods)
+      def self.included(base)
+        base.send(:include, InstanceMethods) # Have to use send(:include) because include is a private method.
       end
 
       module InstanceMethods
